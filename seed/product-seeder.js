@@ -1,7 +1,6 @@
 var Product = require("../models/product");
 var mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost:27017/shopping", { useNewUrlParser: true });
-// mongoose.connect("localhost:27017/shopping");//not use in latest version it shows eror
+mongoose.connect("mongodb://Sommycart:Som801886@ds235022.mlab.com:35022/shopping", { useNewUrlParser: true });
 var products = [
     new Product({
     imagepath:'https://i2.wp.com/www.shinyshiny.tv/AKG%20K242%20HD.jpeg?resize=200%2C200&ssl=1',
