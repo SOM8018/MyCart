@@ -1,0 +1,89 @@
+<div class="row">
+   <div class="col-lg-6 col-lg-offset-3 text-center">
+       <div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        Payment Details
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <form action="/checkout" method="post" id="check-out-form">
+                    <div class="form-group">
+                        <label for="name">
+                            Name</label>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon2"><span class="glyphicon glyphicon-user"></span></span>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your name..." aria-describedby="basic-addon1"
+                                required autofocus />
+                        </div>
+                        <label for="Adress">
+                           Adress</label>
+                        <div class="input-group">
+                             <span class="input-group-addon"><span class="glyphicon glyphicon-home"></span></span>
+                            <input type="text" class="form-control" id="adress" placeholder="Enter your adress..."
+                                required autofocus />
+                        </div>
+                        <label for="Card Holder Name">
+                           Card Holder Name</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                            <input type="text" class="form-control" id="card-name" placeholder="name..."
+                                required autofocus />
+                            
+                        </div>
+                        <label for="cardNumber">
+                            Card Number</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                            <input type="text" class="form-control" id="card-number" placeholder="Valid Card Number"
+                                required autofocus />
+                            
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-7 col-md-7">
+                            <div class="form-group">
+                                <label for="card-expiry-month">
+                                    ExpiryMonth</label>&emsp13;&emsp13;
+                                    <label for="card-expiry-year">
+                                    ExpiryYear</label>
+                                <div class="col-xs-6 col-lg-6 pl-ziro">
+                                    <input type="text" class="form-control" id="card-expiry-month" placeholder="MM" required />
+                                </div>
+                                <div class="col-xs-6 col-lg-6 pl-ziro">
+                                    <input type="text" class="form-control" id="card-expiry-year" placeholder="YY" required /></div>
+                            </div>
+                        </div>
+                        <div class="col-xs-5 col-md-5 pull-right">
+                            <div class="form-group">
+                                <label for="cvCode">
+                                    CV CODE</label>
+                                <input type="password" class="form-control" id="cvCode" placeholder="CV" required />
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+            <ul class="nav nav-pills nav-stacked">
+                <li class="active"><a href="#"><span class="badge pull-right">Rs.{{total}}</span> Final Payment</a>
+                </li>
+            </ul>
+            <br/>
+            <button type="submit" class="btn btn-success btn-lg btn-block">Pay</button>
+            {{!-- <a href="#" class="btn btn-success btn-lg btn-block" role="button">Pay</a> --}}
+
+        </form>
+        </div>
+    </div>
+</div>
+
+   </div>
+</div>
+
+<script src="https://js.stripe.com/v3/"></script>
+<script src="src/javascripts/checkout.js"></script>
+
