@@ -19,7 +19,9 @@ require("./config/passport");
 
 var app = express();
 // //connect the database to shoppingcart
-mongoose.connect("mongodb://localhost:27017/shopping", { useNewUrlParser: true });
+mongoose.connect("mongodb://Sommycart:Som801886@ds235022.mlab.com:35022/shopping", { useNewUrlParser: true });
+//upper mongodb hosted on dbuser:"Sommycart" dbpassword:"Som801886"//
+//also change in product-seeder.js------------------------------------------------
 // mongoose.connect("localhost:27017/shopping");//not use in latest version it shows eror
 
 
